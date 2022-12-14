@@ -1,0 +1,14 @@
+/* Display the new todo form as a flexbox with two columns */
+.new-todo {
+    width: auto;
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    grid-gap: 1em;
+}
+
+#todo-list{
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr 0.5fr;
+    grid-gap: 1em;
+    margin: 2em 2ex;
+}

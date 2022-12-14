@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Todo Liste</title>
+    <link rel="stylesheet" href="todo.css">
+    <script src="todo.js"></script>
+</head>
+
+<body onload="init()">
+
+    <h1>Todo Liste</h1>
+    <div id="todo-list">
+
+    </div>
+    <form id="todo-form" action="https://jupiter.fh-swf.de/echo" method="post" onsubmit="saveTodo(event)"
+        onreset="initForm(event)">
+        <fieldset class="new-todo">
+            <label for="todo">Aufgabe</label><input type="text" name="title" id="todo" placeholder="Neue Aufgabe">
+            <label for="due">Zu erledigen bis</label><input type="date" name="due" id="due">
+            <label for="status">Status</label><select name="status" id="status">
+                <option value="0">offen</option>
+                <option value="1">in Bearbeitung</option>
+                <option value="2">erledigt</option>
+            </select>
+        </fieldset>
+        <input type="submit" name="submit" value="hinzufügen">
+    </form>
+
+</body>
+
+</html>
