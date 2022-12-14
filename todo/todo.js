@@ -39,7 +39,7 @@ function initForm(event) {
 
 function init() {
     // Get todos from loacal storage
-    todos = JSON.parse(localStorage.getItem("todos")) || [];
+    todos = loadTodos();
     console.log("Loaded todos: %o", todos);
 
     // Reset the form
@@ -95,6 +95,20 @@ function changeStatus(id) {
     if (todo) {
         todo.status = (todo.status + 1) % status.length;
         showTodos();
-        localStorage.setItem("todos", JSON.stringify(todos));
+        saveTodos();
     }
 }
+
+function loadTodos() {
+    let todos = localStorage.getItem("todos");
+    if (todos) {
+        return JSON.parse(todos);
+    } else {
+        return [];
+    }
+}
+
+function saveTodos() {
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
+
