@@ -9,7 +9,8 @@ function createTodoElement(todo) {
         `<div>${todo.title}</div> 
          <div>${due.toLocaleDateString()}</div>
          <button class="status" onclick="changeStatus(${todo.id})">${status[todo.status || 0]}</button>
-         <button class="edit" onclick="editTodo(${todo.id})">Bearbeiten</button>`);
+         <button class="edit" onclick="editTodo(${todo.id})">Bearbeiten</button>
+         <button class="delete" onclick="deleteTodo(${todo.id})">Löschen</button>`);
 }
 
 function showTodos() {
@@ -86,6 +87,16 @@ function editTodo(id) {
         form.status.value = todo.status;
         form.submit.value = "Änderungen speichern";
         form.dataset.id = todo.id;
+    }
+}
+
+function deleteTodo(id) {
+    let todo = todos.find(t => t.id === id);
+    console.log("Deleting todo: %o", todo);
+    if (todo) {
+        todos = todos.filter(t => t.id !== id);
+        showTodos();
+        saveTodos();
     }
 }
 

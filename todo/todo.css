@@ -8,7 +8,7 @@
 
 #todo-list{
     display: grid;
-    grid-template-columns: 2fr 1fr 0.5fr 0.5fr;
+    grid-template-columns: 2fr 0.5fr 0.25fr 0.25fr 0.25fr;
     grid-gap: 1em;
     margin: 2em 2ex;
 }
