@@ -12,3 +12,8 @@
     grid-gap: 1em;
     margin: 2em 2ex;
 }
+
+#todo-form {
+    max-width: 70ex;
+    margin: 0 auto;
+}
