@@ -5,7 +5,7 @@ anzeigen.
 
 Wir gehen dabei davon aus, dass wir ein Javascript-Objekt mit den ToDos haben (später werden wir dieses Objekt als JSON-Datei vom Backend erhalten):
 
-```JSON
+```JavaScript
     const TODOS = [
         {
             id: 0,
