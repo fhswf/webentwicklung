@@ -3,34 +3,22 @@
 Nachdem wir in der letzten Übung ein Formular zur Eingabe von ToDos erstellt haben, wollen wir dieses Mal dynamisch ToDos
 anzeigen.
 
-Wir gehen dabei davon aus, dass wir ein Javascript-Objekt mit den ToDos haben (später werden wir dieses Objekt als JSON-Datei vom Backend erhalten):
+Wir gehen dabei davon aus, dass wir ein JavaScript-Objekt mit den ToDos haben (später werden wir dieses Objekt als JSON-Datei vom Backend erhalten):
 
 ```JavaScript
     const TODOS = [
         {
-            id: 0,
-            title: 'Aufgabe 4 abgeben',
-            due: '2021-05-21T10:00:00.000Z',
-            status: 'done'
+            "id":1671056616571,
+            "title":"Übung 4 machen",
+            "due":"2022-11-12T00:00:00.000Z",
+            "status":0
         },
         {
-            id: 1,
-            title: 'Aufgabe 6 abgeben',
-            due: '2021-06-08T10:00:00.000Z',
-            status: 'doing'
+            "id":1671087245763,
+            "title":"Für die Klausur Webentwicklung lernen",
+            "due":"2023-01-14T00:00:00.000Z",
+            "status":2
         },
-        {
-            id: 2,
-            title: 'ToDo-Anwendung fertig stellen',
-            due: '2021-06-22T10:00:00.000Z',
-            status: 'open'
-        },
-        {
-            id: 3,
-            title: 'Für die Klausur lernen',
-            due: '2021-07-01T11:00:00.000Z',
-            status: 'open'
-        }
     ];
 ```
 
@@ -42,9 +30,9 @@ Die fertige Lösung besteht aus
 
 ### Aufgabe 4.1 Anzeige der ToDo-Liste
 
-Schreiben Sie eine Javascript-Funktion, die aus dem obigen Array `TODOS` entsprechende DOM-Elemente erzeugt und
+Schreiben Sie eine JavaScript-Funktion, die aus dem obigen Array `TODOS` entsprechende DOM-Elemente erzeugt und
 diese in das HTML-Dokument einfügt. Über den Eventhandler `onload` des `<body>`-Elements können Sie die Funktion nach dem Laden der HTML-Datei ausführen lassen.
 
 ### Aufgabe 4.2 Anlegen von neuen ToDos
 
-Schreiben Sie eine Javascript-Funktion, die als Eventhandler `onsubmit` für das Formular aus der letzten Aufgabe fungiert und das anzulegende ToDo an das Array `TODOS` anhängt.
+Schreiben Sie eine JavaScript-Funktion, die als Eventhandler `onsubmit` für das Formular aus der letzten Aufgabe fungiert und das anzulegende ToDo an das Array `TODOS` anhängt.
